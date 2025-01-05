@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../hr-login/hr-styles/main.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="d-flex">
+        <!-- Navigation Sidebar -->
+        <div class="navigation position-fixed">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon"> <ion-icon name="logo-apple"></ion-icon> </span>
+                        <span class="title"> Mobile Application Logo </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"> <ion-icon name="home-outline"></ion-icon> </span>
+                        <span class="title"> Dashboard </span>
+                    </a>
+                </li>
+            </ul>
+            <div class="logout-container">
+                <li class="settings">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+                <li class="logout">
+                    <a href="#">
+                        <span class="icon"> <ion-icon name="log-out-outline"></ion-icon> </span>
+                        <span class="title"> Logout </span>
+                    </a>
+                </li>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content ms-auto">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+                <div class="user">
+                    <ion-icon name="person-circle-outline"></ion-icon>
+                </div>
+            </div>
+
+            <div class="container mt-4">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h1>Feedback Dashboard</h1>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-outline-primary" id="weeklyBtn">Weekly</button>
+                        <button type="button" class="btn btn-outline-primary" id="quarterlyBtn">Quarterly</button>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-md-3 mb-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Total Feedback</h5>
+                                <p class="card-text display-4" id="totalFeedback">1,234</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Positive Feedback</h5>
+                                <p class="card-text display-4" id="positiveFeedback">78%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Negative Feedback</h5>
+                                <p class="card-text display-4" id="negativeFeedback">22%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Average Rating</h5>
+                                <p class="card-text display-4" id="averageRating">4.2</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Date</th>
+                                <th>Student ID</th>
+                                <th>Feedback</th>
+                                <th>Rating</th>
+                            </tr>
+                        </thead>
+                        <tbody id="feedbackTableBody">
+                            <!-- Feedback data will be inserted here by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

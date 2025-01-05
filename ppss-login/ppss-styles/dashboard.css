@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+}
+
+header {
+    color: black;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.7rem;
+}
+
+.building {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.building:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.building h2 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+    color: #343a40;
+}
+
+.rooms {
+    display: none;
+    margin-top: 10px;
+}
+
+.room {
+    background: #e9ecef;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    display: block;
+    margin-top: 10px;
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background: #218838;
+}
+
+.delete-icon {
+    color: #dc3545;
+    cursor: pointer;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.building:hover .delete-icon,
+.room:hover .delete-icon {
+    opacity: 1;
+}
+
+.delete-icon:hover {
+    color: #c82333;
+}
+
+.building-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
